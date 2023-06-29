@@ -11,9 +11,9 @@ import bootstrap from "bootstrap/dist/js/bootstrap.bundle.js";
 // iconos
 
 import { OhVueIcon, addIcons } from "oh-vue-icons";
-import { GiScarecrow ,RiHealthBookLine,FaUserCheck,FaHandHoldingMedical,AiBiorxivSquare,IoConstructSharp, FaHome, HiCheck,BiWhatsapp} from "oh-vue-icons/icons";
+import { FaHome, FaRegularEdit,IoArchiveSharp,FaCog,IoInformationCircleSharp} from "oh-vue-icons/icons";
 
-addIcons(GiScarecrow ,RiHealthBookLine,FaUserCheck,FaHandHoldingMedical,AiBiorxivSquare,IoConstructSharp, FaHome, HiCheck,BiWhatsapp);
+addIcons(FaHome, FaRegularEdit,IoArchiveSharp,FaCog,IoInformationCircleSharp);
 
 const app = createApp(App)
 app.component("v-icon",OhVueIcon);

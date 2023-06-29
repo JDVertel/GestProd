@@ -1,101 +1,102 @@
 <template>
 
   <div class="container">
-    <h6>pagina administrador</h6>
-    <h6>Gesprod <v-icon name="fa-home" /></h6>
+    <h6>Dashboard</h6>
+
     <div class="row">
-      <div class="col-4">
+      <div class="col-6 col-md-4">
         <div class="card">
           <img src="..." class="card-img-top" alt="..." />
           <div class="card-body">
             <p class="card-text">
-             Proveedores
+              <RouterLink to="/proveedores">Proveedores</RouterLink>
             </p>
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-6 col-md-4">
         <div class="card" >
           <img src="..." class="card-img-top" alt="..." />
           <div class="card-body">
             <p class="card-text">
-              Clientes
+              <RouterLink to="/clientes">Clientes</RouterLink>
             </p>
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-6 col-md-4">
         <div class="card" >
           <img src="..." class="card-img-top" alt="..." />
           <div class="card-body">
             <p class="card-text">
-              Usuarios
+              <RouterLink to="/usuarios">Usuarios</RouterLink>
             </p>
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-6 col-md-4">
         <div class="card" >
           <img src="..." class="card-img-top" alt="..." />
           <div class="card-body">
             <p class="card-text">
-              Productos
+              <RouterLink to="/productos">Productos</RouterLink>
             </p>
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-6 col-md-4">
         <div class="card" >
           <img src="..." class="card-img-top" alt="..." />
           <div class="card-body">
             <p class="card-text">
-             Materiales
+              <RouterLink to="/materiales">Materiales</RouterLink>
             </p>
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-6 col-md-4">
         <div class="card" >
           <img src="..." class="card-img-top" alt="..." />
           <div class="card-body">
             <p class="card-text">
-              Informes
+              <RouterLink to="/informes">Informes</RouterLink>
             </p>
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-6 col-md-4">
         <div class="card" >
           <img src="..." class="card-img-top" alt="..." />
           <div class="card-body">
             <p class="card-text">
-             Produccion
+              <RouterLink to="/produccion">Produccion</RouterLink>
             </p>
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-6 col-md-4">
         <div class="card" >
           <img src="..." class="card-img-top" alt="..." />
           <div class="card-body">
             <p class="card-text">
-              Pedidos
+              <RouterLink to="/pedidos">Pedidos</RouterLink>
             </p>
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-6 col-md-4">
         <div class="card" >
           <img src="..." class="card-img-top" alt="..." />
           <div class="card-body">
             <p class="card-text">
-              Ventas
+              <RouterLink to="/ventas">Ventas</RouterLink>
             </p>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <h6>Gesprod <v-icon name="fa-home" /></h6>
 </template>
 
 <script></script>
