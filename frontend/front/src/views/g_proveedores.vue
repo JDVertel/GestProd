@@ -440,11 +440,5 @@ export default {};
 </script>
 
 <style>
-.minimal {
-  font-size: 0.6rem !important;
-  padding: 5px !important;
-}
-li {
-  font-size: 0.6rem !important;
-}
+
 </style>

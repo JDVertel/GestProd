@@ -4,7 +4,9 @@ import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
-  <header>
+
+    <div class="container">
+      <header>
     <nav>
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/about">About</RouterLink>
@@ -15,8 +17,8 @@ import HelloWorld from "./components/HelloWorld.vue";
 
   </header>
 
-
   <RouterView />
+</div>
 </template>
 
 <style scoped>
@@ -70,6 +72,7 @@ nav a:first-of-type {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
+ 
   }
 
   nav {
@@ -80,5 +83,13 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
+}
+
+.minimal {
+  font-size: 0.6rem !important;
+  padding: 5px !important;
+}
+li {
+  font-size: 0.6rem !important;
 }
 </style>
