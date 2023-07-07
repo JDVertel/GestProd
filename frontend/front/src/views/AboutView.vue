@@ -1,9 +1,8 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <div class="col-6"><img src="../img/logo.png" alt="" class="logo" /></div>
+    <h6>Este Prototipo fue desarrollado en Tecnoparque Nodo Socorro</h6>
   </div>
-  <h6>Gesprod <v-icon name="fa-home" /> </h6>
 </template>
 
 <style>

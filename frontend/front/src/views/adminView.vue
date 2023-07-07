@@ -1,7 +1,12 @@
 <template>
 
   <div class="container">
-    <h6>Dashboard</h6>
+    <dir class="row">
+      <div class="col-6"><img src="../img/logo.png" alt="" class="logo" /></div>
+      <div class="col-6"><h6>Dashboard</h6></div>
+    </dir>
+   
+    
 
     <div class="row">
       <div class="col-6 col-md-4">
