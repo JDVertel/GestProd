@@ -11,9 +11,9 @@ import bootstrap from "bootstrap/dist/js/bootstrap.bundle.js";
 // iconos
 
 import { OhVueIcon, addIcons } from "oh-vue-icons";
-import { FaHome, FaRegularEdit,IoArchiveSharp,FaCog,IoInformationCircleSharp} from "oh-vue-icons/icons";
+import { FaHome, FaRegularEdit,IoArchiveSharp,FaCog,IoInformationCircleSharp,BiTruck,RiCustomerService2Line,HiSolidUsers,LaProductHunt,HiDocumentReport,MdOutputOutlined,MdBordercolorOutlined,MdShoppingcartOutlined,SiMaterialdesignicons } from "oh-vue-icons/icons";
 
-addIcons(FaHome, FaRegularEdit,IoArchiveSharp,FaCog,IoInformationCircleSharp);
+addIcons(FaHome, FaRegularEdit,IoArchiveSharp,FaCog,IoInformationCircleSharp,BiTruck,RiCustomerService2Line,HiSolidUsers,LaProductHunt,HiDocumentReport,MdOutputOutlined,MdBordercolorOutlined,MdShoppingcartOutlined,SiMaterialdesignicons );
 
 const app = createApp(App)
 app.component("v-icon",OhVueIcon);

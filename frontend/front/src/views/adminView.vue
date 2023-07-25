@@ -6,12 +6,12 @@
       <div class="col-6"><h6>Dashboard</h6></div>
     </dir>
    
-    
+    <br>
 
     <div class="row">
       <div class="col-6 col-md-4">
         <div class="card">
-          <img src="..." class="card-img-top" alt="..." />
+          <v-icon name="bi-truck" class="card-img-top iconos"/>
           <div class="card-body">
             <p class="card-text">
               <RouterLink to="/proveedores">Proveedores</RouterLink>
@@ -21,7 +21,7 @@
       </div>
       <div class="col-6 col-md-4">
         <div class="card" >
-          <img src="..." class="card-img-top" alt="..." />
+          <v-icon name="ri-customer-service-2-line" class="card-img-top iconos"/>
           <div class="card-body">
             <p class="card-text">
               <RouterLink to="/clientes">Clientes</RouterLink>
@@ -31,7 +31,7 @@
       </div>
       <div class="col-6 col-md-4">
         <div class="card" >
-          <img src="..." class="card-img-top" alt="..." />
+          <v-icon name="hi-solid-users" class="card-img-top iconos"/>
           <div class="card-body">
             <p class="card-text">
               <RouterLink to="/usuarios">Usuarios</RouterLink>
@@ -41,7 +41,7 @@
       </div>
       <div class="col-6 col-md-4">
         <div class="card" >
-          <img src="..." class="card-img-top" alt="..." />
+          <v-icon name="la-product-hunt" class="card-img-top iconos"/>
           <div class="card-body">
             <p class="card-text">
               <RouterLink to="/productos">Productos</RouterLink>
@@ -51,7 +51,7 @@
       </div>
       <div class="col-6 col-md-4">
         <div class="card" >
-          <img src="..." class="card-img-top" alt="..." />
+          <v-icon name="si-materialdesignicons" class="card-img-top iconos"/>
           <div class="card-body">
             <p class="card-text">
               <RouterLink to="/materiales">Materiales</RouterLink>
@@ -61,7 +61,7 @@
       </div>
       <div class="col-6 col-md-4">
         <div class="card" >
-          <img src="..." class="card-img-top" alt="..." />
+          <v-icon name="hi-document-report" class="card-img-top iconos"/>
           <div class="card-body">
             <p class="card-text">
               <RouterLink to="/informes">Informes</RouterLink>
@@ -71,7 +71,7 @@
       </div>
       <div class="col-6 col-md-4">
         <div class="card" >
-          <img src="..." class="card-img-top" alt="..." />
+          <v-icon name="md-output-outlined" class="card-img-top iconos"/>
           <div class="card-body">
             <p class="card-text">
               <RouterLink to="/produccion">Produccion</RouterLink>
@@ -81,7 +81,7 @@
       </div>
       <div class="col-6 col-md-4">
         <div class="card" >
-          <img src="..." class="card-img-top" alt="..." />
+          <v-icon name="md-bordercolor-outlined" class="card-img-top iconos"/>
           <div class="card-body">
             <p class="card-text">
               <RouterLink to="/pedidos">Pedidos</RouterLink>
@@ -91,7 +91,7 @@
       </div>
       <div class="col-6 col-md-4">
         <div class="card" >
-          <img src="..." class="card-img-top" alt="..." />
+          <v-icon name="md-shoppingcart-outlined" class="card-img-top iconos"/>
           <div class="card-body">
             <p class="card-text">
               <RouterLink to="/ventas">Ventas</RouterLink>
@@ -101,13 +101,21 @@
       </div>
     </div>
   </div>
-  <h6>Gesprod <v-icon name="fa-home" /></h6>
+
 </template>
 
 <script></script>
 
-<style>
+<style scoped>
 .card{
 margin: 10px!important;
+}
+.iconos{
+  margin-top: 20px;
+  scale:2.5;
+
+}
+.card-body{
+text-align: center!important;
 }
 </style>

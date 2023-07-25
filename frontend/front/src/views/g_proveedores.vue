@@ -208,6 +208,7 @@
                 v-model="proveedor.docreplegal"
               />
             </div>
+           
             <div class="col-6 col-md-4">
               <input
                 class="form-control form-control-sm"
@@ -241,6 +242,9 @@
                 Guardar >>
               </button>
             </div>
+
+
+            
             <h6>vector</h6>
             {{ proveedor }}
             <!--  -->
