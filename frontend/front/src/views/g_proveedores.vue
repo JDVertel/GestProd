@@ -199,15 +199,7 @@
                 v-model="proveedor.replegal"
               />
             </div>
-            <div class="col-6 col-md-4">
-              <input
-                class="form-control form-control-sm"
-                type="text"
-                placeholder="Doc Rep Legal"
-                aria-label=".form-control-sm example"
-                v-model="proveedor.docreplegal"
-              />
-            </div>
+        
            
             <div class="col-6 col-md-4">
               <input

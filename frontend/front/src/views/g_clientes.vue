@@ -29,7 +29,7 @@
           aria-controls="profile"
           aria-selected="false"
         >
-          Proveedor
+          Clientes
         </button>
       </li>
       <li class="nav-item" role="presentation">
@@ -71,11 +71,11 @@
               </tr>
             </thead>
             <tbody class="table-group-divider">
-              <tr v-for="provee,index in proveedores" :key="index">
-                <th>{{provee.nombre}}</th>
-                <td>{{provee.nit}}</td>
-                <td>{{provee.direccion}}</td>
-                <td>{{provee.telefono}}</td>
+              <tr v-for="(provee, index) in clientes" :key="index">
+                <th>{{ provee.nombre }}</th>
+                <td>{{ provee.nit }}</td>
+                <td>{{ provee.direccion }}</td>
+                <td>{{ provee.telefono }}</td>
                 <td>
                   <div class="dropdown">
                     <button
@@ -118,8 +118,6 @@
                   </div>
                 </td>
               </tr>
-     
-    
             </tbody>
           </table>
         </div>
@@ -142,16 +140,16 @@
                 type="text"
                 placeholder="Nombre o razon social "
                 aria-label=".form-control-sm example"
-                v-model="proveedor.nombre"
+                v-model="cliente.nombre"
               />
             </div>
             <div class="col-6 col-md-4">
               <input
                 class="form-control form-control-sm"
                 type="text"
-                placeholder="Nit"
+                placeholder="Documento"
                 aria-label=".form-control-sm example"
-                v-model="proveedor.nit"
+                v-model="cliente.doc"
               />
             </div>
             <div class="col-6 col-md-4">
@@ -160,7 +158,7 @@
                 type="text"
                 placeholder="Direccion"
                 aria-label=".form-control-sm example"
-                v-model="proveedor.direccion"
+                v-model="cliente.direccion"
               />
             </div>
             <div class="col-6 col-md-4">
@@ -169,7 +167,7 @@
                 type="text"
                 placeholder="Telefono"
                 aria-label=".form-control-sm example"
-                v-model="proveedor.telefono"
+                v-model="cliente.telefono"
               />
             </div>
             <div class="col-6 col-md-4">
@@ -178,82 +176,31 @@
                 type="text"
                 placeholder="Email"
                 aria-label=".form-control-sm example"
-                v-model="proveedor.email"
+                v-model="cliente.email"
               />
             </div>
-            <div class="col-6 col-md-4">
-              <input
-                class="form-control form-control-sm"
-                type="text"
-                placeholder="Pagina web"
-                aria-label=".form-control-sm example"
-                v-model="proveedor.pagweb"
-              />
-            </div>
-            <div class="col-6 col-md-4">
-              <input
-                class="form-control form-control-sm"
-                type="text"
-                placeholder="Rep Legal"
-                aria-label=".form-control-sm example"
-                v-model="proveedor.replegal"
-              />
-            </div>
-            <div class="col-6 col-md-4">
-              <input
-                class="form-control form-control-sm"
-                type="text"
-                placeholder="Doc Rep Legal"
-                aria-label=".form-control-sm example"
-                v-model="proveedor.docreplegal"
-              />
-            </div>
-            <div class="col-6 col-md-4">
-              <input
-                class="form-control form-control-sm"
-                type="text"
-                placeholder="Banco de cuenta"
-                aria-label=".form-control-sm example"
-                v-model="proveedor.banco"
-              />
-            </div>
-            <div class="col-6 col-md-4">
-              <input
-                class="form-control form-control-sm"
-                type="text"
-                placeholder="Tipo de cuenta"
-                aria-label=".form-control-sm example"
-                v-model="proveedor.tipocuenta"
-              />
-            </div>
-            <div class="col-6 col-md-4">
-              <input
-                class="form-control form-control-sm"
-                type="text"
-                placeholder="Numero cuenta"
-                aria-label=".form-control-sm example"
-                v-model="proveedor.numcuenta"
-              />
-            </div>
-            <div class="col-6 col-md-4">
           
-              <button class="btn btn-success btn-sm" @click="guardaproveedor()" v-if="proveedor.nombre && proveedor.nit" enabled >
+     
+   
+            <div class="col-6 col-md-4">
+              <button
+                class="btn btn-success btn-sm"
+                @click="guardacliente()"
+                v-if="cliente.nombre && cliente.doc"
+                enabled
+              >
                 Guardar >>
               </button>
             </div>
             <h6>vector</h6>
-            {{ proveedor }}
+            {{ cliente }}
             <!--  -->
 
             <ul>
-          
               <h6>tabla</h6>
-              <li v-for="prov,index in proveedores" :key="index">
+              <li v-for="(prov, index) in clientees" :key="index">
                 {{ prov.nombre }} {{ prov.nit }}
-              
               </li>
-
- 
             </ul>
           </div>
         </div>
@@ -274,10 +221,10 @@
             <table class="table table-sm">
               <thead class="table-dark">
                 <tr>
-                  <th>Nit</th>
+                  <th>Doc</th>
                   <th>Nombre</th>
                   <th>Telefono</th>
-                  <th>Ciudad</th>
+                  <th>Direccion</th>
                   <th>Opciones</th>
                 </tr>
               </thead>
@@ -374,38 +321,33 @@
 <script setup>
 import { ref } from "vue";
 
-let proveedor = ref({
-  nombre: "",
-  nit: "",
-  direccion: "",
-  telefono: "",
-});
+let cliente = ref({});
 
-
-let proveedores = ref([]);
-
+let clientes = ref([]);
 
 /* funciones */
 
-const guardaproveedor = () => {
-
-  proveedores.value.push({
-    nombre: proveedor.value.nombre,
-    nit: proveedor.value.nit,
-    direccion: proveedor.value.direccion,
-    telefono: proveedor.value.telefono,
+const guardacliente = () => {
+  clientes.value.push({
+    nombre: cliente.value.nombre,
+    doc: cliente.value.doc,
+    direccion: cliente.value.direccion,
+    telefono: cliente.value.telefono,
   });
   /* vaciamos campos */
 
-  proveedor.value.nombre = "";
-  proveedor.value.nit = "";
-  proveedor.value.direccion = "";
-  proveedor.value.telefono = "";
-};
+
+  cliente.value.nombre = "";
+  cliente.value.doc = "";
+  cliente.value.direccion = "";
+  cliente.value.telefono = "";
+  cliente.value.email="";
+
+
+}; 
 </script>
 
 <style></style>
-
 
 <!-- 
 
